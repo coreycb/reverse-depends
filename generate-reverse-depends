@@ -1,0 +1,5 @@
+#!/bin/bash
+
+while read p; do
+    echo "=== $p ===" && reverse-depends -r noble $p
+done < ./packages > ./reverse-depends
